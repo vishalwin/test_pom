@@ -2,6 +2,7 @@ from selenium.webdriver.common.by import By
 from pages.base_page import BasePage
 import time
 class LoginPage(BasePage):
+    
     USERNAME =(By.ID,"user-name")
     PASSWORD= (By.ID,"password")
     LOGIN_BUTTON= (By.ID,"login-button")
@@ -9,6 +10,8 @@ class LoginPage(BasePage):
     ERROT_MSG = (By.XPATH,"//div[@class='error-message-container error']")
     LOGOUT_LINK =(By.ID,"logout_sidebar_link")
     MENU_BUTTON = (By.ID,"react-burger-menu-btn")
+    
+    
     def __init__(self,driver):
         super().__init__(driver)
         # because LoginPage is inheriting from BasePage. So constructor of parent class

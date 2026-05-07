@@ -43,7 +43,6 @@ def vrify_login_page(driver):
     
     
     
-    
 
          
     

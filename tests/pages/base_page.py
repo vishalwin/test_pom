@@ -8,6 +8,7 @@ class BasePage:
         
     def open_url(self):
         self.driver.get("https://www.saucedemo.com/")
+        self.driver.maximize_window()
         
 
 
