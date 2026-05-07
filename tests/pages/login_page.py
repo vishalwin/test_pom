@@ -6,6 +6,7 @@ class LoginPage(BasePage):
     PASSWORD= (By.ID,"password")
     LOGIN_BUTTON= (By.ID,"login-button")
     PRODUCT_TITLE = (By.CLASS_NAME,"title")
+    ERROT_MSG = (By.XPATH,"//div[@class='error-message-container error']")
     
     def __init__(self,driver):
         super().__init__(driver)
@@ -21,4 +22,6 @@ class LoginPage(BasePage):
         return self.driver.find_element(*self.PRODUCT_TITLE).text == "Products"
         
     
+    def is_error_displayed(self):
+        return self.driver.find_element(*self.ERROT_MSG).is_displayed()
     
